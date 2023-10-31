@@ -1,0 +1,141 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 5,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 0,
+          "y": 0
+        },
+        "id": 1,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"display: flex; flex-direction: row\">\n  <span style=\"margin-right: 20px; margin-top:5px\">\n    <img src=\"/public/img/DinasPertanian.png\"/>\n  </span>\n  <span>\n    <h1>Dinas Pertanian</h1>\n    <p>Analisa dan Monitoring Data Pertanian  di \n    Lingkungan Pemerintah Daerah Kabupaten Ngawi</p>\n  </span>\n</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "10.0.0",
+        "title": "Link Dashboard Dinas Pertanian",
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 8,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"display: flex; flex-direction: row\">\n  <span style=\"margin-right: 20px; margin-top:5px\">\n    <img src=\"/public/img/DinasKesehatan.png\"/>\n  </span>\n  <span>\n    <h1>Dinas Kesehatan</h1>\n    <p>Analisa dan Monitoring Data Kesehatan  di \nLingkungan Pemerintah Daerah Kabupaten Ngawi</p>\n  </span>\n</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "10.0.0",
+        "title": "Link Dashboard Dinas Kesehatan",
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "description": "",
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 16,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"display: flex; flex-direction: row\">\n  <span style=\"margin-right: 20px; margin-top:5px\">\n    <img src=\"/public/img/DinasSosial.png\"/>\n  </span>\n  <span>\n    <h1>Dinas Sosial</h1>\n    <p>Analisa dan Monitoring Data Kemiskinan dan   \nKesejahteraan di Lingkungan Pemerintah Daerah \nKabupaten Ngawi\n</p>\n  </span>\n</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "10.0.0",
+        "title": "Link Dashboard Dinas Sosial",
+        "type": "text"
+      }
+    ],
+    "refresh": "",
+    "schemaVersion": 38,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {
+      "hidden": true,
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ],
+      "type": "timepicker"
+    },
+    "timezone": "browser",
+    "title": "Home",
+    "uid": "aafd5b8e-8948-421c-bc18-390975241603",
+    "version": 6,
+    "weekStart": ""
+  }

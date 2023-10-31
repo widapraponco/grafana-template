@@ -2,15 +2,27 @@ version: "3.6"
 
 networks:
   grafnet:
-    external: true
-
+    external: false
 
 services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-www
+    restart: unless-stopped
+    tty: true
+    volumes: 
+      - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx/log:/var/log/nginx
+    networks:
+      - grafnet
+    ports:
+      - 80:80
+      - 443:443
   # My grafana service
   grafana:
     image: grafana/grafana
     build:
-      context: ""
+      context: .
       dockerfile: Dockerfile
     container_name: grafana
     ports:
