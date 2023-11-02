@@ -1,0 +1,3446 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 9,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 42,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<span style=\"margin-right: 20px; margin-top:5px\">\n    <img src=\"/public/img/dispen.png\" width=\"700\" height=\"150\"/>\n  </span>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.1.5",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "description": "Lokasi geografis lumbung pangan",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "locale"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 14,
+        "x": 0,
+        "y": 5
+      },
+      "id": 1,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "osm-standard"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": false,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 45,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 25,
+                  "offsetX": 0,
+                  "offsetY": 35,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "A"
+            },
+            "location": {
+              "latitude": "lat",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "Gerih",
+            "tooltip": false,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "field": "COUNT(district)",
+                  "fixed": 50,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 25,
+                  "offsetX": 7,
+                  "offsetY": 38,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "B"
+            },
+            "location": {
+              "latitude": "lat",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "WIdodaren",
+            "tooltip": false,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 40,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "40",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 25,
+                  "offsetX": -17,
+                  "offsetY": 20,
+                  "textAlign": "left",
+                  "textBaseline": "top"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "C"
+            },
+            "location": {
+              "latitude": "lat",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "Kedunggalar",
+            "tooltip": false,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 50,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 25,
+                  "offsetX": 0,
+                  "offsetY": 35,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "D"
+            },
+            "location": {
+              "latitude": "lat",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "Geneng",
+            "tooltip": false,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 40,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 25,
+                  "offsetX": 0,
+                  "offsetY": 30,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "E"
+            },
+            "location": {
+              "latitude": "lat",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "Ngrambe",
+            "tooltip": false,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 50,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 25,
+                  "offsetX": 0,
+                  "offsetY": 25,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "F"
+            },
+            "location": {
+              "latitude": "lg",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "Jogorogo",
+            "tooltip": false,
+            "type": "markers"
+          },
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "red"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 40,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/unicons/ankh.svg",
+                  "mode": "fixed"
+                },
+                "text": {
+                  "field": "sum(conversion_area)",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 20,
+                  "offsetX": 0,
+                  "offsetY": 27,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "G"
+            },
+            "location": {
+              "latitude": "lat",
+              "longitude": "lg",
+              "mode": "coords"
+            },
+            "name": "Mantingan",
+            "tooltip": false,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "none"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "coords",
+          "lat": -7.4177995,
+          "lon": 111.4091394,
+          "shared": false,
+          "zoom": 13.3
+        }
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district =\"Gerih\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [
+                  {
+                    "name": "lat",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "agricultures"
+        },
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district =\"Widodaren\"",
+          "refId": "B",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        },
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district = \"Kedunggalar\"",
+          "refId": "C",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        },
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district = \"geneng\"",
+          "refId": "D",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "name": "district",
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "8b8a9b89-89ab-4cde-b012-318b5342f50b",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "Kedunggalar"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "baa9b9b8-89ab-4cde-b012-318b5340a50d",
+              "type": "group"
+            },
+            "whereString": "district = 'Kedunggalar'"
+          },
+          "table": "agricultures"
+        },
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district = \"ngrambe\"",
+          "refId": "E",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "name": "district",
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "8b8a9b89-89ab-4cde-b012-318b5342f50b",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "Kedunggalar"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "baa9b9b8-89ab-4cde-b012-318b5340a50d",
+              "type": "group"
+            },
+            "whereString": "district = 'Kedunggalar'"
+          },
+          "table": "agricultures"
+        },
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district =\"Jogorogo\"",
+          "refId": "F",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        },
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area),lat,lg FROM u735046609_dispertanngawi.agricultures WHERE district =\"Mantingan\" ",
+          "refId": "G",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 14,
+        "y": 5
+      },
+      "id": 44,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "count(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT count(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE YEAR(created_at)>=\"2023\" ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [],
+            "limit": 50,
+            "orderBy": {
+              "property": {
+                "type": "string"
+              },
+              "type": "property"
+            },
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "99a89aa8-0123-4456-b89a-b18b53988836",
+                  "properties": {
+                    "field": "updated_at",
+                    "operator": "less_or_equal",
+                    "value": [
+                      null
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "datetime"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "aab9a9b8-89ab-4cde-b012-318b53831716",
+              "properties": {
+                "conjunction": "AND"
+              },
+              "type": "group"
+            }
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "TOTAL LUMBUNG",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 5
+      },
+      "id": 45,
+      "options": {
+        "baseValueField": "(sum(total_grain)-count(total_grain))*100/count(total_grain)",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "sum(total_grain)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT sum(total_grain), (sum(total_grain)-count(total_grain))*100/count(total_grain) FROM u735046609_dispertanngawi.agricultures WHERE YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [],
+            "limit": 50,
+            "orderBy": {
+              "property": {
+                "type": "string"
+              },
+              "type": "property"
+            },
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "99a89aa8-0123-4456-b89a-b18b53988836",
+                  "properties": {
+                    "field": "updated_at",
+                    "operator": "less_or_equal",
+                    "value": [
+                      null
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "datetime"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "aab9a9b8-89ab-4cde-b012-318b53831716",
+              "properties": {
+                "conjunction": "AND"
+              },
+              "type": "group"
+            }
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "TOTAL GABAH",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 14,
+        "y": 10
+      },
+      "id": 48,
+      "options": {
+        "baseValueField": "(sum(organic)-count(organic))/count(organic)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "SUM(organic)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT SUM(organic), (sum(organic)-count(organic))/count(organic)*100 FROM u735046609_dispertanngawi.agricultures WHERE YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "SUM",
+                "parameters": [
+                  {
+                    "name": "organic_area",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "TOTAL SAWAH ",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 10
+      },
+      "id": 47,
+      "options": {
+        "baseValueField": "(sum(conversion)-count(conversion))/count(conversion)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "sum(conversion)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion), (sum(conversion)-count(conversion))/count(conversion)*100 FROM u735046609_dispertanngawi.agricultures WHERE YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [],
+            "limit": 50,
+            "orderBy": {
+              "property": {
+                "type": "string"
+              },
+              "type": "property"
+            },
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "99a89aa8-0123-4456-b89a-b18b53988836",
+                  "properties": {
+                    "field": "updated_at",
+                    "operator": "less_or_equal",
+                    "value": [
+                      null
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "datetime"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "aab9a9b8-89ab-4cde-b012-318b53831716",
+              "properties": {
+                "conjunction": "AND"
+              },
+              "type": "group"
+            }
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "TOTAL KONVERSI",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 14,
+        "y": 15
+      },
+      "id": 46,
+      "options": {
+        "baseValueField": "(sum(organic)-count(organic))/count(organic)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "sum(organic)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT sum(organic), (sum(organic)-count(organic))/count(organic)*100 FROM u735046609_dispertanngawi.agricultures WHERE YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [],
+            "limit": 50,
+            "orderBy": {
+              "property": {
+                "type": "string"
+              },
+              "type": "property"
+            },
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "99a89aa8-0123-4456-b89a-b18b53988836",
+                  "properties": {
+                    "field": "updated_at",
+                    "operator": "less_or_equal",
+                    "value": [
+                      null
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "datetime"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "aab9a9b8-89ab-4cde-b012-318b53831716",
+              "properties": {
+                "conjunction": "AND"
+              },
+              "type": "group"
+            }
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "TOTAL PANEN",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 15
+      },
+      "id": 19,
+      "options": {
+        "baseValueField": "(sum(organic_area)-count(organic_area))/count(organic_area)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "sum(organic_area)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT sum(organic_area), (sum(organic_area)-count(organic_area))/count(organic_area)*100 FROM u735046609_dispertanngawi.agricultures WHERE YEAR(created_at)>=\"2023\" ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "SUM",
+                "parameters": [
+                  {
+                    "name": "organic_area",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "TOTAL SAWAH ORGANIK",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 3,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 20
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [
+            "sum"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion_area) as \"Perkembangan Panen\", input_at FROM u735046609_dispertanngawi.agricultures GROUP BY input_at",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Grafik Perkembangan Panen",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 25,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 3,
+            "pointSize": 7,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "always",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "line"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 20
+      },
+      "id": 43,
+      "options": {
+        "legend": {
+          "calcs": [
+            "sum"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "asc"
+        }
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT sum(organic) as \"organic\", input_at FROM u735046609_dispertanngawi.agricultures GROUP BY created_at",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        },
+        {
+          "dataset": "db_kspmitraartha",
+          "datasource": {
+            "type": "mysql",
+            "uid": "fd762764-8df0-4a90-b4a9-5d3f1a8aa76e"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": "SELECT sum(conversion) as \"Konversi\", input_at FROM u735046609_dispertanngawi.agricultures GROUP BY input_at",
+          "refId": "B",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Grafik Organic VS Konversi",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 28
+      },
+      "id": 27,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'bringin'AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "bringin"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'bringin'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "BRINGIN",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 28
+      },
+      "id": 24,
+      "options": {
+        "baseValueField": "count(district)-COUNT(district)/count(district)",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-COUNT(district)/count(district) FROM u735046609_dispertanngawi.agricultures WHERE district = 'geneng' AND YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "geneng"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'geneng'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "GENENG",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 28
+      },
+      "id": 26,
+      "options": {
+        "baseValueField": "COUNT(district)-COUNT(district)/COUNT(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), COUNT(district)-COUNT(district)/COUNT(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'gerih' AND YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "gerih"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'gerih'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "GERIH",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 28
+      },
+      "id": 29,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'jogorogo' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "jogorogo"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'jogorogo'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "JOGOROGO",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 28
+      },
+      "id": 35,
+      "options": {
+        "baseValueField": "COUNT(district)-COUNT(district)/COUNT(district)",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), COUNT(district)-COUNT(district)/COUNT(district) FROM u735046609_dispertanngawi.agricultures WHERE district = 'mantingan' ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "mantingan"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'mantingan'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "MANTINGAN",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 28
+      },
+      "id": 36,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'ngawi kota' AND YEAR(created_at)>=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "ngawi kota"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'ngawi kota'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "NGAWI KOTA",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 32
+      },
+      "id": 28,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'kasreman' and YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "kasreman"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'kasreman'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "KASREMAN",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 32
+      },
+      "id": 32,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'kedunggalar' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "kedunggalar"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'kedunggalar'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "KEDUNGGALAR",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 32
+      },
+      "id": 33,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'kendal' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "kendal"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'kendal'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "KENDAL",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 32
+      },
+      "id": 34,
+      "options": {
+        "baseValueField": "(count(district)-count(district))/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), (count(district)-count(district))/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'Kwadungan' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "kwadungan"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'kwadungan'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "KWADUNGAN",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 32
+      },
+      "id": 30,
+      "options": {
+        "baseValueField": "(count(district)-count(district))/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), (count(district)-count(district))/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'Karanganyar' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "karanganyar"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'karanganyar'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "KARANGANYAR",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 32
+      },
+      "id": 23,
+      "options": {
+        "baseValueField": "(count(district)-count(district))/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": "none"
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), (count(district)-count(district))/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'karangjati' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "karangjati"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'karangjati'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "KARANGJATI",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 36
+      },
+      "id": 25,
+      "options": {
+        "baseValueField": "(count(district)-count(district))/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), (count(district)-count(district))/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'ngrambe' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "ngrambe"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'ngrambe'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 36
+      },
+      "id": 37,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'padas' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "padas"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'padas'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "PADAS",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 36
+      },
+      "id": 38,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": -1,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'pangkur' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "pangkur"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'pangkur'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "PANGKUR",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 36
+      },
+      "id": 40,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'pitu' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "Pitu"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'Pitu'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "PITU",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 36
+      },
+      "id": 31,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'sine' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "sine"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'sine'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "SINE",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 36
+      },
+      "id": 41,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "200",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'widodaren' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "widodaren"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'widodaren'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "WIDODAREN",
+      "type": "nikosc-percenttrend-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 40
+      },
+      "id": 39,
+      "options": {
+        "baseValueField": "count(district)-count(district)/count(district)*100",
+        "baseValueFontSize": "16px",
+        "interpretAsTrend": true,
+        "percentageNrDecimals": 0,
+        "percentageValueField": "COUNT(district)",
+        "percentageValueFontSize": "150",
+        "positiveIsGood": true,
+        "referenceText": "",
+        "referenceTextFontSize": "12px",
+        "unit": ""
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "dataset": "u735046609_dispertanngawi",
+          "datasource": {
+            "type": "mysql",
+            "uid": "f444b39e-38af-4895-902a-3bd4f2280175"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(district), count(district)-count(district)/count(district)*100 FROM u735046609_dispertanngawi.agricultures WHERE district = 'paron' AND YEAR(created_at)<=\"2023\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "name": "COUNT",
+                "parameters": [
+                  {
+                    "name": "district",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50,
+            "whereJsonTree": {
+              "children1": [
+                {
+                  "id": "b8a889a9-89ab-4cde-b012-318b4196ab5c",
+                  "properties": {
+                    "field": "district",
+                    "operator": "equal",
+                    "value": [
+                      "paron"
+                    ],
+                    "valueSrc": [
+                      "value"
+                    ],
+                    "valueType": [
+                      "text"
+                    ]
+                  },
+                  "type": "rule"
+                }
+              ],
+              "id": "998a8ba8-89ab-4cde-b012-318b413aceb8",
+              "type": "group"
+            },
+            "whereString": "district = 'paron'"
+          },
+          "table": "agricultures"
+        }
+      ],
+      "title": "PARON",
+      "type": "nikosc-percenttrend-panel"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "25232",
+          "value": "25232"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select sum(organic_area) as total from agricultures",
+        "description": "Jumlah total area sawah organik di ngawi",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Sawah Organik",
+        "multi": false,
+        "name": "total_organic_area",
+        "options": [],
+        "query": "select sum(organic_area) as total from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "25810",
+          "value": "25810"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select sum(conversion_area) as total from agricultures",
+        "description": "Jumlah total area sawah organik di ngawi",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Sawah Organik",
+        "multi": false,
+        "name": "total_conversion_area",
+        "options": [],
+        "query": "select sum(conversion_area) as total from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "25550",
+          "value": "25550"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select sum(organic) as total from agricultures",
+        "description": "Jumlah total area sawah organik di ngawi",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Sawah Organik",
+        "multi": false,
+        "name": "total_organic",
+        "options": [],
+        "query": "select sum(organic) as total from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "24461",
+          "value": "24461"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select sum(conversion) as total from agricultures",
+        "description": "Jumlah total area sawah organik di ngawi",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Sawah Organik",
+        "multi": false,
+        "name": "total_conversion",
+        "options": [],
+        "query": "select sum(conversion) as total from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "24983",
+          "value": "24983"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select sum(total_grain) as total from agricultures",
+        "description": "Jumlah total gabah di ngawi",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Gabah",
+        "multi": false,
+        "name": "total_grain",
+        "options": [],
+        "query": "select sum(total_grain) as total from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "50011",
+          "value": "50011"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select SUM(conversion+organic) from agricultures",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Panen",
+        "multi": false,
+        "name": "total_panen",
+        "options": [],
+        "query": "select SUM(conversion+organic) from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "51042",
+          "value": "51042"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select SUM(conversion_area+organic_area) from agricultures",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Panen",
+        "multi": false,
+        "name": "total_sawah",
+        "options": [],
+        "query": "select SUM(conversion_area+organic_area) from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "1000",
+          "value": "1000"
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "aa65a024-f6a0-477b-bc67-916741a6af85"
+        },
+        "definition": "select count(*) from agricultures",
+        "hide": 2,
+        "includeAll": false,
+        "label": "Total Lumbung",
+        "multi": false,
+        "name": "total_lumbung",
+        "options": [],
+        "query": "select count(*) from agricultures",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "2021-01-01T11:16:48.000Z",
+    "to": "2022-12-30T11:16:48.000Z"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dinas Pertanian",
+  "uid": "da1a9b1c-8f93-4dcf-ac52-5f7c72625730",
+  "version": 193,
+  "weekStart": ""
+}
