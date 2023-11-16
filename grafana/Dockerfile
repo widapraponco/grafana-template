@@ -48,6 +48,7 @@ RUN sed -i "s|\[\[.NavTree\]\],|nav,|g; \
     /usr/share/grafana/public/views/index.html
 
 RUN sed -i 's|<title>\[\[.AppTitle\]\]</title>|<title>Dashboard Pemkab. Ngawi</title>|g' /usr/share/grafana/public/views/index.html
+RUN sed -i 's|<div class="preloader__text">Loading Grafana</div>|<div class="preloader__text">Loading Dashboard</div>|g' /usr/share/grafana/public/views/index.html
 
 ## Update Title
 RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|AppTitle="Grafana"|AppTitle="Dashboard Pemkab. Ngawi"|g' {} \;
