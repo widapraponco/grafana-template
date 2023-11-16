@@ -10,9 +10,10 @@ services:
     container_name: nginx-www
     restart: unless-stopped
     tty: true
-    volumes: 
+    volumes:
       - ./nginx/conf:/etc/nginx/conf.d
       - ./nginx/log:/var/log/nginx
+      - /etc/cert:/etc/cert
     networks:
       - grafnet
     ports:
