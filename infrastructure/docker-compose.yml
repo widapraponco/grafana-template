@@ -1,4 +1,4 @@
-version: '3.5'
+version: "3.5"
 
 networks:
   grafnet:
@@ -19,3 +19,11 @@ services:
       - ./mariadb/data:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment:
+      PMA_HOST: mariadb
+      PMA_ABSOLUTE_URI: https://dashboard.ngawikab.go.id/phpmyadmin/
+    ports:
+      - 8081:80
+    restart: unless-stopped
