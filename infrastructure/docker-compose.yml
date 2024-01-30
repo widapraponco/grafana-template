@@ -25,5 +25,5 @@ services:
       PMA_HOST: mariadb
       PMA_ABSOLUTE_URI: https://dashboard.ngawikab.go.id/phpmyadmin/
     ports:
-      - 8081:80
+      - 8081:8000
     restart: unless-stopped
