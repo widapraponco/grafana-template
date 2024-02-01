@@ -19,15 +19,3 @@ services:
       - ./mariadb/data:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
-  phpmyadmin:
-    image: phpmyadmin:latest
-    container_name: phpmyadmin
-    networks:
-      - grafnet
-    environment:
-      PMA_HOST: mariadb
-      MYSQL_ROOT_PASSWORD: root
-      PMA_ABSOLUTE_URI: https://dashboard.ngawikab.go.id/phpmyadmin
-    ports:
-      - 8081:80
-    restart: unless-stopped
