@@ -5,6 +5,32 @@ networks:
     external: false
 
 services:
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    networks:
+      - grafnet
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mariadb/data:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    networks:
+      - grafnet
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: root
+      PMA_ABSOLUTE_URI: https://dashboard.ngawikab.go.id/phpmyadmin
+    ports:
+      - 8081:80
+    restart: unless-stopped
+    depends_on:
+      - mariadb
   nginx:
     image: nginx:alpine
     container_name: nginx-www
@@ -33,33 +59,6 @@ services:
     networks:
       - grafnet
 
-  phpmyadmin:
-    image: phpmyadmin:latest
-    container_name: phpmyadmin
-    networks:
-      - grafnet
-    environment:
-      PMA_HOST: mariadb
-      MYSQL_ROOT_PASSWORD: root
-      PMA_ABSOLUTE_URI: https://dashboard.ngawikab.go.id/phpmyadmin
-    ports:
-      - 8081:80
-    restart: unless-stopped
-    depends_on:
-      - mariadb
-
-  mariadb:
-    image: mariadb
-    container_name: mariadb
-    networks:
-      - grafnet
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - ./mariadb/data:/docker-entrypoint-initdb.d
-    ports:
-      - "3306:3306"
 # Explicitly define the persistent volume for your data storage
 volumes:
   grafana-data:
