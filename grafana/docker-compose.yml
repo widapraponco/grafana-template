@@ -47,6 +47,19 @@ services:
     restart: unless-stopped
     depends_on:
       - mariadb
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    networks:
+      - grafnet
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mariadb/data:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
 # Explicitly define the persistent volume for your data storage
 volumes:
   grafana-data:
