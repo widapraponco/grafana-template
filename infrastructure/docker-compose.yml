@@ -21,6 +21,7 @@ services:
       - "3306:3306"
   phpmyadmin:
     image: phpmyadmin:latest
+    container_name: phpmyadmin
     environment:
       PMA_HOST: mariadb
       MYSQL_ROOT_PASSWORD: root
