@@ -23,7 +23,7 @@ services:
     image: phpmyadmin:latest
     environment:
       PMA_HOST: mariadb
-      PMA_ABSOLUTE_URI: https://dashboard.ngawikab.go.id/phpmyadmin/
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - 8081:80
     restart: unless-stopped
