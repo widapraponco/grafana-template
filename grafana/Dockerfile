@@ -8,7 +8,7 @@ ENV GF_AUTH_ANONYMOUS_ENABLED "false"
 # Role of anonymous user
 ENV GF_AUTH_ANONYMOUS_ORG_ROLE "Admin"
 # Install plugins here our in your own config file
-ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.7.zip;custom-plugin"
+ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.7.zip;/var/lib/grafana/plugins/map-panel"
 ENV GF_USERS_DEFAULT_THEME=dark
 # Explore
 ENV GF_EXPLORE_ENABLED=false
@@ -26,6 +26,8 @@ ADD grafana.ini /etc/grafana/grafana.ini
 ADD dashboards /etc/grafana/dashboards
 # Add assets file
 ADD assets /usr/share/grafana/public/img
+# Add plugin
+ADD /var/lib/grafana/plugins /var/lib/grafana/plugin
 
 COPY dashboards/Ngawi/home_dashboard.json /usr/share/grafana/public/dashboards/default.json
 
