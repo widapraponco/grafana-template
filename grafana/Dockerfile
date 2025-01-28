@@ -8,7 +8,16 @@ ENV GF_AUTH_ANONYMOUS_ENABLED "false"
 # Role of anonymous user
 ENV GF_AUTH_ANONYMOUS_ORG_ROLE "Admin"
 # Install plugins here our in your own config file
-ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.7.zip;/var/lib/grafana/plugins/map-panel"
+ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.7.zip;"
+
+# Copy your custom plugin into the plugins directory
+COPY /var/lib/grafana/plugins/map-panel /var/lib/grafana/plugins/map-panel
+# Set permissions for the plugin directory
+RUN chown -R grafana:grafana /var/lib/grafana/plugins/map-panel
+
+# Optionally, allow unsigned plugins (if your plugin is unsigned)
+ENV GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=map-panel
+
 ENV GF_USERS_DEFAULT_THEME=dark
 # Explore
 ENV GF_EXPLORE_ENABLED=false
