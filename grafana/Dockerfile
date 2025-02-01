@@ -1,4 +1,4 @@
-FROM grafana/grafana:10.1.5
+FROM grafana/grafana:11.3.1
 
 ENV GF_ENABLE_GZIP=true
 # Disable Login form or not
