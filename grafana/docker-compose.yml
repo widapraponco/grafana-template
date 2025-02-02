@@ -61,7 +61,7 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-geojson
     volumes:
-      - grafana_data:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
       - ./plugins/map-panel:/var/lib/grafana/plugins/map-panel
 
 # Explicitly define the persistent volume for your data storage
