@@ -39,7 +39,7 @@ services:
     volumes:
       - ./nginx/conf:/etc/nginx/conf.d
       - ./nginx/log:/var/log/nginx
-      - /etc/cert:/etc/cert
+      - ./cert:/etc/cert
     networks:
       - grafnet
     ports:
