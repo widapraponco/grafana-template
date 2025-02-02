@@ -23,7 +23,7 @@ COPY dashboards/Ngawi/home_dashboard.json /usr/share/grafana/public/dashboards/d
 
 ## Paths
 ENV GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
-ENV GF_PATHS_PLUGINS="/var/lib/grafana/plugins"
+# ENV GF_PATHS_PLUGINS="/var/lib/grafana/plugins"
 
 ## Copy Provisioning
 COPY --chown=grafana:root provisioning $GF_PATHS_PROVISIONING
