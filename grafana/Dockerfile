@@ -11,7 +11,7 @@ ENV GF_AUTH_ANONYMOUS_ORG_ROLE "Admin"
 ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.7.zip;"
 
 # Copy your custom plugin into the plugins directory
-COPY /var/lib/grafana/plugins/map-panel /var/lib/grafana/plugins/map-panel
+COPY ./plugins/map-panel /var/lib/grafana/plugins/map-panel
 # Set permissions for the plugin directory
 RUN chown -R grafana:grafana /var/lib/grafana/plugins/map-panel
 
@@ -36,7 +36,7 @@ ADD dashboards /etc/grafana/dashboards
 # Add assets file
 ADD assets /usr/share/grafana/public/img
 # Add plugin
-ADD /var/lib/grafana/plugins /var/lib/grafana/plugin
+ADD ./plugins/map-panel /var/lib/grafana/plugin
 
 COPY dashboards/Ngawi/home_dashboard.json /usr/share/grafana/public/dashboards/default.json
 
