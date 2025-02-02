@@ -1,33 +1,14 @@
-FROM grafana/grafana:11.3.1
+# Use official Grafana image
+FROM grafana/grafana:11.3.4
 
-ENV GF_ENABLE_GZIP=true
-ENV GF_SERVER_ROOT_URL="https://dashboard.ngawikab.go.id/"
-ENV GF_SERVER_SERVE_FROM_SUB_PATH=false
-# Disable Login form or not
-ENV GF_AUTH_DISABLE_LOGIN_FORM "false"
-# Allow anonymous authentication or not
-ENV GF_AUTH_ANONYMOUS_ENABLED "false"
-# Role of anonymous user
-ENV GF_AUTH_ANONYMOUS_ORG_ROLE "Admin"
-# Install plugins here our in your own config file
-ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.7.zip;wp-dynamic-geojson"
+# Set environment variables
+ENV GF_SECURITY_ADMIN_USER=admin \
+    GF_SECURITY_ADMIN_PASSWORD=admin \
+    GF_USERS_ALLOW_SIGN_UP=false \
+    GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=my-custom-plugin
 
-# Optionally, allow unsigned plugins (if your plugin is unsigned)
-ENV GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-geojson
-# Copy your custom plugin into the plugins directory
-COPY ./plugins/map-panel /var/lib/grafana/plugins/map-panel
-# Set permissions for the plugin directory
-# RUN chown -R grafana:root /var/lib/grafana/plugins/map-panel
-
-
-ENV GF_USERS_DEFAULT_THEME=dark
-# Explore
-ENV GF_EXPLORE_ENABLED=false
-# Alerting
-ENV GF_ALERTING_ENABLED=false
-ENV GF_UNIFIED_ALERTING_ENABLED=false
-# check update
-ENV GF_ANALYTICS_CHECK_FOR_UPDATES=false
+# Copy the custom plugin into the plugins directory
+COPY my-custom-plugin /var/lib/grafana/plugins/my-custom-plugin
 
 # Add provisioning
 ADD provisioning /etc/grafana/provisioning
