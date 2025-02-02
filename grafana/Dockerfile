@@ -1,6 +1,8 @@
 FROM grafana/grafana:11.3.1
 
 ENV GF_ENABLE_GZIP=true
+ENV GF_SERVER_ROOT_URL="https://dashboard.ngawikab.go.id/"
+ENV GF_SERVER_SERVE_FROM_SUB_PATH=false
 # Disable Login form or not
 ENV GF_AUTH_DISABLE_LOGIN_FORM "false"
 # Allow anonymous authentication or not
