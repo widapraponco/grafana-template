@@ -5,7 +5,7 @@ FROM grafana/grafana:11.3.1
 ENV GF_SECURITY_ADMIN_USER=admin \
     GF_SECURITY_ADMIN_PASSWORD=admin \
     GF_USERS_ALLOW_SIGN_UP=false \
-    GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-json
+    GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-geojson
 
 # Copy the custom plugin into the plugins directory
 COPY ./plugins/map-panel /var/lib/grafana/plugins/map-panel
