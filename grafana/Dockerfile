@@ -15,7 +15,7 @@ ENV GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-geojson
 # Copy your custom plugin into the plugins directory
 COPY ./plugins/map-panel /var/lib/grafana/plugins/map-panel
 # Set permissions for the plugin directory
-RUN chown -R grafana:grafana /var/lib/grafana/plugins/map-panel
+RUN chown -R grafana:root /var/lib/grafana/plugins/map-panel
 
 
 ENV GF_USERS_DEFAULT_THEME=dark
