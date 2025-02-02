@@ -63,6 +63,8 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
       - ./plugins/map-panel:/var/lib/grafana/plugins/map-panel
+    networks:
+      - grafnet
 
 # Explicitly define the persistent volume for your data storage
 volumes:

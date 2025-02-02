@@ -1,14 +1,14 @@
 # Use official Grafana image
-FROM grafana/grafana:11.3.4
+FROM grafana/grafana:11.3.1
 
 # Set environment variables
 ENV GF_SECURITY_ADMIN_USER=admin \
     GF_SECURITY_ADMIN_PASSWORD=admin \
     GF_USERS_ALLOW_SIGN_UP=false \
-    GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=my-custom-plugin
+    GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-json
 
 # Copy the custom plugin into the plugins directory
-COPY my-custom-plugin /var/lib/grafana/plugins/my-custom-plugin
+COPY ./plugins/map-panel /var/lib/grafana/plugins/map-panel
 
 # Add provisioning
 ADD provisioning /etc/grafana/provisioning
