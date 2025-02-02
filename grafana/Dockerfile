@@ -13,7 +13,7 @@ ENV GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/rel
 # Copy your custom plugin into the plugins directory
 COPY ./plugins/map-panel /var/lib/grafana/plugins/map-panel
 # Set permissions for the plugin directory
-RUN chown -R grafana:grafana /var/lib/grafana/plugins/map-panel
+# RUN chown -R grafana:grafana /var/lib/grafana/plugins/map-panel
 
 # Optionally, allow unsigned plugins (if your plugin is unsigned)
 ENV GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=map-panel
@@ -36,7 +36,7 @@ ADD dashboards /etc/grafana/dashboards
 # Add assets file
 ADD assets /usr/share/grafana/public/img
 # Add plugin
-ADD ./plugins/map-panel /var/lib/grafana/plugin
+# ADD ./plugins/map-panel /var/lib/grafana/plugin
 
 COPY dashboards/Ngawi/home_dashboard.json /usr/share/grafana/public/dashboards/default.json
 
