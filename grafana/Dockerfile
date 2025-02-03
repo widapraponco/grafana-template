@@ -5,7 +5,7 @@ FROM grafana/grafana-enterprise:11.3.1
 ENV GF_SECURITY_ADMIN_USER=admin \
     GF_SECURITY_ADMIN_PASSWORD=admin \
     GF_USERS_ALLOW_SIGN_UP=false \
-    GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.7/nikosc-percenttrend-panel-1.0.8.zip;" \
+    GF_INSTALL_PLUGINS="https://github.com/nikos/grafana-percent-trend-panel/releases/download/v1.0.8/nikosc-percenttrend-panel-1.0.8.zip;" \
     GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=wp-dynamic-geojson
 
 # Set Grafana to run in development mode
