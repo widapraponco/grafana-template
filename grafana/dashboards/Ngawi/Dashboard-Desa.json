@@ -1,0 +1,1407 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "description": "Central dashboard for Kabupaten Ngawi",
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 6,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 0,
+          "y": 0
+        },
+        "id": 13,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #2a3a5e 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{wilayah}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{wCount}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[0].title",
+                "name": "wilayah"
+              },
+              {
+                "jsonPath": "data[0].count",
+                "language": "jsonpath",
+                "name": "wCount"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 6,
+          "y": 0
+        },
+        "id": 14,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #00b4db 0%, #8e44ad 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{penduduk}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[1].title",
+                "name": "penduduk"
+              },
+              {
+                "jsonPath": "data[1].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 12,
+          "y": 0
+        },
+        "id": 15,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{title}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[2].title",
+                "name": "title"
+              },
+              {
+                "jsonPath": "data[2].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 18,
+          "y": 0
+        },
+        "id": 16,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #2ecc71 0%, #aaff00 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{title}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[3].title",
+                "name": "title"
+              },
+              {
+                "jsonPath": "data[3].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 0,
+          "y": 5
+        },
+        "id": 17,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #b71c1c 0%, #ff8f00 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{title}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[4].title",
+                "name": "title"
+              },
+              {
+                "jsonPath": "data[4].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 6,
+          "y": 5
+        },
+        "id": 18,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #000080 0%, #00ffff 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{title}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[5].title",
+                "name": "title"
+              },
+              {
+                "jsonPath": "data[5].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 12,
+          "y": 5
+        },
+        "id": 19,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #4169e1 0%, #9932cc 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2>{{title}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[6].title",
+                "name": "title"
+              },
+              {
+                "jsonPath": "data[6].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 18,
+          "y": 5
+        },
+        "id": 20,
+        "options": {
+          "afterRender": "",
+          "content": "<div\n  style=\"color: #ffffff; /* Light text */ font-family: Arial, sans-serif; border: 1px solid #333; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, #4b0082 0%, #ff00ff 100%); box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\">\n  <h2 style=\"font-size: 19.3px;\">{{title}}</h2>\n  <p style=\"text-align:right; font-size: 32px; font-weight: bold\">{{count}}</p>\n</div>",
+          "contentPartials": [],
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "everyRow",
+          "styles": "",
+          "wrap": true
+        },
+        "pluginVersion": "5.4.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[7].title",
+                "name": "title"
+              },
+              {
+                "jsonPath": "data[7].count",
+                "language": "jsonpath",
+                "name": "count"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/i"
+          }
+        ],
+        "title": "",
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 10,
+          "x": 0,
+          "y": 10
+        },
+        "id": 12,
+        "options": {
+          "barRadius": 0,
+          "barWidth": 0.71,
+          "fullHighlight": false,
+          "groupWidth": 0.7,
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "orientation": "auto",
+          "showValue": "auto",
+          "stacking": "none",
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          },
+          "xTickLabelRotation": 0,
+          "xTickLabelSpacing": 0
+        },
+        "pluginVersion": "11.3.1",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data",
+                "language": "jsonata",
+                "type": "string"
+              },
+              {
+                "jsonPath": "data.tahun",
+                "language": "jsonata",
+                "name": ""
+              }
+            ],
+            "method": "GET",
+            "params": [
+              [
+                "d",
+                "${v_desa}"
+              ]
+            ],
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/idm"
+          }
+        ],
+        "title": "Index Desa Membangun",
+        "transformations": [
+          {
+            "id": "extractFields",
+            "options": {
+              "format": "json",
+              "jsonPaths": [],
+              "keepTime": true,
+              "replace": true,
+              "source": "result0"
+            }
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {},
+              "includeByName": {},
+              "indexByName": {},
+              "renameByName": {
+                "tahun": "Tahun"
+              }
+            }
+          }
+        ],
+        "type": "barchart"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "description": "Area cakupan",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 15,
+          "w": 14,
+          "x": 10,
+          "y": 10
+        },
+        "id": 1,
+        "options": {
+          "basemap": {
+            "config": {},
+            "type": "default"
+          },
+          "controls": {
+            "mouseWheelZoom": true,
+            "showAttribution": true,
+            "showDebug": false,
+            "showLayercontrol": true,
+            "showScale": false,
+            "showZoom": true
+          },
+          "layers": [
+            {
+              "config": {
+                "cluster": false,
+                "clusterDistance": 20,
+                "clusterMinDistance": 0,
+                "clusterValue": "size",
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "enableGradient": false,
+                "enableShadow": false,
+                "fillOpacity": 0.4,
+                "geoJsonStrokeSize": {
+                  "fixed": 5,
+                  "max": 10,
+                  "min": 1
+                },
+                "iconSize": 9,
+                "pinShape": "marker",
+                "shape": "circle",
+                "showLegend": true,
+                "showPin": false,
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                }
+              },
+              "displayProperties": [
+                "Desa"
+              ],
+              "location": {
+                "geojson": "geojson",
+                "mode": "geojson"
+              },
+              "name": "Polygon",
+              "query": {
+                "id": "byRefId",
+                "options": "A"
+              },
+              "type": "markers",
+              "useProperties": true
+            }
+          ],
+          "view": {
+            "id": "auto",
+            "lat": -7.414254,
+            "lon": 111.609029,
+            "zoom": 12
+          }
+        },
+        "pluginVersion": "1.0.0",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data.geojson"
+              }
+            ],
+            "method": "GET",
+            "params": [
+              [
+                "t",
+                "geojson"
+              ],
+              [
+                "d",
+                "${v_desa}"
+              ]
+            ],
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/d"
+          }
+        ],
+        "title": "Peta Wilayah",
+        "type": "wp-dynamic-geojson"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "description": "Tingkat kehadiran aparatur desa selama 30 hari terakhir",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 10,
+          "x": 0,
+          "y": 18
+        },
+        "id": 11,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "11.3.1",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data"
+              }
+            ],
+            "method": "GET",
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/k"
+          }
+        ],
+        "title": "Kehadiran",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              }
+            },
+            "mappings": []
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byFrameRefID",
+                "options": "A"
+              },
+              "properties": []
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 0,
+          "y": 25
+        },
+        "id": 3,
+        "options": {
+          "displayLabels": [
+            "percent"
+          ],
+          "legend": {
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true,
+            "values": [
+              "value"
+            ]
+          },
+          "pieType": "donut",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "",
+            "values": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "11.3.1",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[*].nama",
+                "name": "",
+                "type": "string"
+              },
+              {
+                "jsonPath": "data[*].jumlah",
+                "language": "jsonpath",
+                "name": "",
+                "type": "number"
+              }
+            ],
+            "hide": false,
+            "method": "GET",
+            "params": [],
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/st/agama"
+          }
+        ],
+        "title": "Agama",
+        "transformations": [
+          {
+            "id": "filterByValue",
+            "options": {
+              "filters": [
+                {
+                  "config": {
+                    "id": "lowerOrEqual",
+                    "options": {
+                      "value": 0
+                    }
+                  },
+                  "fieldName": "jumlah"
+                },
+                {
+                  "config": {
+                    "id": "equal",
+                    "options": {
+                      "value": "JUMLAH"
+                    }
+                  },
+                  "fieldName": "nama"
+                },
+                {
+                  "config": {
+                    "id": "equal",
+                    "options": {
+                      "value": "TOTAL"
+                    }
+                  },
+                  "fieldName": "nama"
+                }
+              ],
+              "match": "any",
+              "type": "exclude"
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "piechart"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              }
+            },
+            "mappings": []
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byFrameRefID",
+                "options": "A"
+              },
+              "properties": []
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 8,
+          "y": 25
+        },
+        "id": 21,
+        "options": {
+          "displayLabels": [
+            "percent"
+          ],
+          "legend": {
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true,
+            "values": [
+              "value"
+            ]
+          },
+          "pieType": "donut",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "",
+            "values": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "11.3.1",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[*].nama",
+                "name": "",
+                "type": "string"
+              },
+              {
+                "jsonPath": "data[*].jumlah",
+                "language": "jsonpath",
+                "name": "",
+                "type": "number"
+              }
+            ],
+            "hide": false,
+            "method": "GET",
+            "params": [],
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/st/rentang-umur"
+          }
+        ],
+        "title": "Rentang Umur",
+        "transformations": [
+          {
+            "id": "filterByValue",
+            "options": {
+              "filters": [
+                {
+                  "config": {
+                    "id": "lowerOrEqual",
+                    "options": {
+                      "value": 0
+                    }
+                  },
+                  "fieldName": "jumlah"
+                },
+                {
+                  "config": {
+                    "id": "equal",
+                    "options": {
+                      "value": "JUMLAH"
+                    }
+                  },
+                  "fieldName": "nama"
+                },
+                {
+                  "config": {
+                    "id": "equal",
+                    "options": {
+                      "value": "TOTAL"
+                    }
+                  },
+                  "fieldName": "nama"
+                }
+              ],
+              "match": "any",
+              "type": "exclude"
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "piechart"
+      },
+      {
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "ae5thqn645af4f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              }
+            },
+            "mappings": []
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byFrameRefID",
+                "options": "A"
+              },
+              "properties": []
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 16,
+          "y": 25
+        },
+        "id": 22,
+        "options": {
+          "displayLabels": [
+            "percent"
+          ],
+          "legend": {
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true,
+            "values": [
+              "value"
+            ]
+          },
+          "pieType": "donut",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "",
+            "values": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "11.3.1",
+        "targets": [
+          {
+            "cacheDurationSeconds": 300,
+            "datasource": {
+              "type": "marcusolsson-json-datasource",
+              "uid": "ae5thqn645af4f"
+            },
+            "fields": [
+              {
+                "jsonPath": "data[*].nama",
+                "name": "",
+                "type": "string"
+              },
+              {
+                "jsonPath": "data[*].jumlah",
+                "language": "jsonpath",
+                "name": "",
+                "type": "number"
+              }
+            ],
+            "hide": false,
+            "method": "GET",
+            "params": [],
+            "queryParams": "",
+            "refId": "A",
+            "urlPath": "/st/pekerjaan"
+          }
+        ],
+        "title": "Pekerjaan",
+        "transformations": [
+          {
+            "id": "filterByValue",
+            "options": {
+              "filters": [
+                {
+                  "config": {
+                    "id": "lowerOrEqual",
+                    "options": {
+                      "value": 0
+                    }
+                  },
+                  "fieldName": "jumlah"
+                },
+                {
+                  "config": {
+                    "id": "equal",
+                    "options": {
+                      "value": "JUMLAH"
+                    }
+                  },
+                  "fieldName": "nama"
+                },
+                {
+                  "config": {
+                    "id": "equal",
+                    "options": {
+                      "value": "TOTAL"
+                    }
+                  },
+                  "fieldName": "nama"
+                }
+              ],
+              "match": "any",
+              "type": "exclude"
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "piechart"
+      }
+    ],
+    "preload": false,
+    "schemaVersion": 40,
+    "tags": [
+      "ngawi"
+    ],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "text": [
+              "3521152001"
+            ],
+            "value": [
+              "3521152001"
+            ]
+          },
+          "description": "Filter data berdasarkan desa",
+          "includeAll": true,
+          "label": "Pilih Desa",
+          "multi": true,
+          "name": "v_desa",
+          "options": [
+            {
+              "selected": true,
+              "text": "Sumberbening",
+              "value": "3521152001"
+            },
+            {
+              "selected": false,
+              "text": "Dero",
+              "value": "3521152005"
+            }
+          ],
+          "query": "Sumberbening : 3521152001, Dero : 3521152005",
+          "type": "custom"
+        }
+      ]
+    },
+    "time": {
+      "from": "2024-12-04T06:05:09.189Z",
+      "to": "2024-12-04T18:05:09.189Z"
+    },
+    "timepicker": {},
+    "timezone": "Asia/Jakarta",
+    "title": "Ngawi Dashboard",
+    "uid": "fe5tb97ng6fi8d",
+    "version": 17,
+    "weekStart": ""
+  }
